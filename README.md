@@ -81,3 +81,6 @@ require ('mason-nvim-lint').setup({
     ensure_installed = {'eslint_d', 'revive'},
 })
 ```
+
+## Copyright
+This project relies heavily on [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim).
