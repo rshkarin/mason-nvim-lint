@@ -1,4 +1,4 @@
-# mason-lspconfig.nvim
+# mason-nvim-lint
 
 # Introduction
 
@@ -61,34 +61,25 @@ require("mason-nvim-lint").setup()
 local DEFAULT_SETTINGS = {
     -- A list of linters to automatically install if they're not already installed. Example: { "eslint_d", "revive" }
     -- This setting has no relation with the `automatic_installation` setting.
+    -- Names of linters should be taken from the mason's registry.
     ---@type string[]
     ensure_installed = {},
 
     -- Whether linters that are set up (via nvim-lint) should be automatically installed if they're not already installed.
+    -- It tries to find the specified linters in the mason's registry to proceed with installation.
     -- This setting has no relation with the `ensure_installed` setting.
-    -- Can either be:
-    --   - false: Linters are not automatically installed.
-    --   - true: All linters are automatically installed.
-    --   - { exclude: string[] }: Linters to exclude from automatic installation.
-    --       Example: automatic_installation = { exclude = { "black" } }
     ---@type boolean
     automatic_installation = true,
-}
 }
 ```
 
 ### Basic Customization
 
-Using this configuration, only inters specified in `ensure_installed` will be installed, ones specified in `nvim-lint` will be ignored.
+Using this configuration, only linters specified in `ensure_installed` will be installed, ones specified in `nvim-lint` will be ignored.
+**NOTE:** The linters in `ensure_installed` should be written in the format of the mason's registry (https://mason-registry.dev/).
 
 ```lua
 require ('mason-nvim-lint').setup({
     ensure_installed = {'eslint_d', 'revive'},
-    automatic_installation = false,
 })
 ```
-
-# Available Linters
-
-
-
