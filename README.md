@@ -1,18 +1,16 @@
 # mason-nvim-lint
 
-# Introduction
-
 `mason-nvim-lint` is a Neovim plugin that closes a gap between `mason.nvim` and `nvim-lint`, it allows install linters configured in `nvim-lint`.
 
-# Requirements
+## Requirements
 
 -   neovim `>= 0.7.0`
 -   [`mason.nvim`](https://github.com/williamboman/mason.nvim)
 -   [`nvim-lint`](https://github.com/mfussenegger/nvim-lint)
 
-# Installation
+## Installation
 
-## [Lazy](https://github.com/folke/lazy.nvim)
+### [Lazy](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
@@ -22,7 +20,7 @@
 }
 ```
 
-## [Packer](https://github.com/wbthomason/packer.nvim)
+### [Packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
@@ -32,7 +30,7 @@ use {
 }
 ```
 
-# Setup
+## Setup
 
 It's crucial to setup plugins in the following order:
 
@@ -44,7 +42,7 @@ Otherwise, `mason-nvim-lint` will not have enough information about configured l
 
 To learn about the available settings and configurations, please refer the [Configuration](#configuration) section.
 
-# Configuration
+## Configuration
 
 You can configure the behavior of `mason-nvim-lint` by passing the configuration during the calling of the `setup()` function. 
 All available settings are provided in [default configuration](#default-configuration) section.
@@ -55,7 +53,7 @@ Example:
 require("mason-nvim-lint").setup()
 ```
 
-## Default configuration
+### Default configuration
 
 ```lua
 local DEFAULT_SETTINGS = {
@@ -73,7 +71,7 @@ local DEFAULT_SETTINGS = {
 }
 ```
 
-### Basic Customization
+#### Basic Customization
 
 Using this configuration, only linters specified in `ensure_installed` will be installed, ones specified in `nvim-lint` will be ignored.
 **NOTE:** The linters in `ensure_installed` should be written in the format of the mason's registry (https://mason-registry.dev/).
