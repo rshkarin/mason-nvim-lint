@@ -14,7 +14,7 @@ local DEFAULT_SETTINGS = {
     ---@type boolean
     automatic_installation = true,
 
-    -- Disables warnings about unavailable linters
+    -- Disables warning notifications about misconfigurations such as invalid linter entries and incorrect plugin load order.
     quiet_mode = false,
 }
 
