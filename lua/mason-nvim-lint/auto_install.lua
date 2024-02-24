@@ -1,6 +1,7 @@
 local registry = require "mason-registry"
 local nvim_lint = require "lint"
 local mapping = require "mason-nvim-lint.mapping"
+local settings = require "mason-nvim-lint.settings"
 
 --@return unknown_linters string[]
 local function auto_install()
@@ -17,7 +18,7 @@ local function auto_install()
         end
     end
 
-    if #unknown_linters > 0 then
+    if #unknown_linters > 0 and not settings.current.quiet_mode then
         vim.notify(
             ("Linters [%s] are absent in the mason's registry. Please, install them manually and remove from configuration.")
             :format(table.concat(unknown_linters, ", ")), vim.log.levels.WARN)

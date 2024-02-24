@@ -8,7 +8,7 @@ local function check_and_notify_bad_setup_order()
     local nvim_lint_ok, nvim_lint = pcall(require, "lint")
     local is_bad_order = not mason_ok or mason.has_setup == false or not nvim_lint_ok
     local impacts_functionality = not mason_ok or #settings.current.ensure_installed > 0
-    if is_bad_order and impacts_functionality then
+    if is_bad_order and impacts_functionality and not settings.current.quiet_mode then
         vim.notify(
             "mason.nvim has not been set up. Make sure to set up 'mason' and 'nvim-lint' before 'mason-nvim-lint'. :h mason-nvim-lint-quickstart",
             vim.log.levels.WARN

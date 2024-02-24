@@ -13,6 +13,9 @@ local DEFAULT_SETTINGS = {
     -- This setting has no relation with the `ensure_installed` setting.
     ---@type boolean
     automatic_installation = true,
+
+    -- Disables warnings about unavailable linters
+    quiet_mode = false,
 }
 
 M._DEFAULT_SETTINGS = DEFAULT_SETTINGS

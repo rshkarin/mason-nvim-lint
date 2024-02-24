@@ -1,4 +1,5 @@
 local registry = require "mason-registry"
+local settings = require "mason-nvim-lint.settings"
 
 local M = {}
 
@@ -52,13 +53,15 @@ function M.try_install(mason_linter_identifier)
             end
         )
         :if_not_present(function()
-            vim.notify(
-                ("[mason-nvim-lint] Linter %q is not a valid entry in ensure_installed. Make sure to only provide valid linter names.")
-                :format(
-                    package_name
-                ),
-                vim.log.levels.WARN
-            )
+            if not settings.current.quiet_mode then
+                vim.notify(
+                    ("[mason-nvim-lint] Linter %q is not a valid entry in ensure_installed. Make sure to only provide valid linter names.")
+                    :format(
+                        package_name
+                    ),
+                    vim.log.levels.WARN
+                )
+            end
         end)
 end
 
