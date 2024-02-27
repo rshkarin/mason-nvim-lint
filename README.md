@@ -68,6 +68,9 @@ local DEFAULT_SETTINGS = {
     -- This setting has no relation with the `ensure_installed` setting.
     ---@type boolean
     automatic_installation = true,
+
+    -- Disables warning notifications about misconfigurations such as invalid linter entries and incorrect plugin load order.
+    quiet_mode = false,
 }
 ```
 
