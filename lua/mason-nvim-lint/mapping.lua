@@ -48,6 +48,7 @@ M.nvimlint_to_package = {
     ["vulture"] = "vulture",
     ["yamllint"] = "yamllint",
     ["tfsec"] = "tfsec",
+    ["tflint"] = "tflint",
 }
 
 M.package_to_nvimlint = _.invert(M.nvimlint_to_package)
