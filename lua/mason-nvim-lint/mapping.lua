@@ -43,11 +43,12 @@ M.nvimlint_to_package = {
     ["standardrb"] = "standardrb",
     ["stylelint"] = "stylelint",
     ["solhint"] = "solhint",
+    ["tfsec"] = "tfsec",
+    ["trivy"] = "trivy",
     ["vale"] = "vale",
     ["vint"] = "vint",
     ["vulture"] = "vulture",
     ["yamllint"] = "yamllint",
-    ["tfsec"] = "tfsec",
 }
 
 M.package_to_nvimlint = _.invert(M.nvimlint_to_package)
