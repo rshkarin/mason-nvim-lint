@@ -45,6 +45,7 @@ M.nvimlint_to_package = {
     ["solhint"] = "solhint",
     ["tfsec"] = "tfsec",
     ["trivy"] = "trivy",
+    ["typstfmt"] = "typstfmt",
     ["vale"] = "vale",
     ["vint"] = "vint",
     ["vulture"] = "vulture",
