@@ -43,6 +43,7 @@ M.nvimlint_to_package = {
     ["standardrb"] = "standardrb",
     ["stylelint"] = "stylelint",
     ["solhint"] = "solhint",
+    ["tflint"] = "tflint",
     ["tfsec"] = "tfsec",
     ["trivy"] = "trivy",
     ["vale"] = "vale",
