@@ -13,7 +13,9 @@ local function auto_install()
             if mason_linter_identifier then
                 require "mason-nvim-lint.install".try_install(mason_linter_identifier)
             else
-                table.insert(unknown_linters, linter_name)
+                if not vim.tbl_contains(unknown_linters, linter_name) then
+                    table.insert(unknown_linters, linter_name)
+                end
             end
         end
     end
