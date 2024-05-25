@@ -9,6 +9,7 @@ M.nvimlint_to_package = {
     ["buildifier"] = "buildifier",
     ["cfn_lint"] = "cfn-lint",
     ["checkstyle"] = "checkstyle",
+    ["checkmake"] = "checkmake",
     ["clj_kondo"] = "clj-kondo",
     ["cmakelint"] = "cmakelint",
     ["codespell"] = "codespell",
