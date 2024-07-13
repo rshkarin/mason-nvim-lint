@@ -6,14 +6,20 @@ local settings = require "mason-nvim-lint.settings"
 --@return unknown_linters string[]
 local function auto_install()
     local unknown_linters = {}
+    local installing_linters = {}
 
     for _, linter_names in pairs(nvim_lint.linters_by_ft) do
         for _, linter_name in ipairs(linter_names) do
             local mason_linter_identifier = mapping.nvimlint_to_package[linter_name]
             if mason_linter_identifier then
-                require "mason-nvim-lint.install".try_install(mason_linter_identifier)
+                if not vim.tbl_contains(installing_linters, mason_linter_identifier) then
+                    table.insert(installing_linters, mason_linter_identifier)
+                    require "mason-nvim-lint.install".try_install(mason_linter_identifier)
+                end
             else
-                table.insert(unknown_linters, linter_name)
+                if not vim.tbl_contains(unknown_linters, linter_name) then
+                    table.insert(unknown_linters, linter_name)
+                end
             end
         end
     end
