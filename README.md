@@ -76,12 +76,12 @@ local DEFAULT_SETTINGS = {
 
 #### Basic Customization
 
-Using this configuration, only linters specified in `ensure_installed` will be installed, ones specified in `nvim-lint` will be ignored.
+Using this configuration, linters specified in `ensure_installed` will be installed directly from the mason's registry, and ones specified in `nvim-lint` will be translated to Mason format and installed.
 **NOTE:** The linters in `ensure_installed` should be written in the format of the mason's registry (https://mason-registry.dev/).
 
 ```lua
 require ('mason-nvim-lint').setup({
-    ensure_installed = {'eslint_d', 'revive'},
+    ensure_installed = { 'bacon' }, -- bacon linter for rust is not available in nvim-lint, so it's specified to be directly installed from the mason's registry
 })
 ```
 
