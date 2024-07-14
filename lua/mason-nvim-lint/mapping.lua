@@ -25,6 +25,7 @@ M.nvimlint_to_package = {
     ["gdlint"] = "gdtoolkit",
     ["golangcilint"] = "golangci-lint",
     ["hadolint"] = "hadolint",
+    ["htmlhint"] = "htmlhint",
     ["jsonlint"] = "jsonlint",
     ["ktlint"] = "ktlint",
     ["luacheck"] = "luacheck",
@@ -47,13 +48,14 @@ M.nvimlint_to_package = {
     ["sqlfluff"] = "sqlfluff",
     ["standardrb"] = "standardrb",
     ["stylelint"] = "stylelint",
+    ["snyk_iac"] = "snyk",
     ["tflint"] = "tflint",
     ["tfsec"] = "tfsec",
     ["trivy"] = "trivy",
     ["vale"] = "vale",
     ["vint"] = "vint",
     ["vulture"] = "vulture",
-    ["write-good"] = "write-good",
+    ["write_good"] = "write-good",
     ["yamllint"] = "yamllint",
 }
 
