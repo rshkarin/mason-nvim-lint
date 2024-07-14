@@ -43,7 +43,22 @@ function M.try_install(mason_linter_identifier)
     local Package = require "mason-core.package"
     local package_name, version = Package.Parse(mason_linter_identifier)
 
-    resolve_package(package_name)
+    local resolved_package = resolve_package(package_name)
+
+    if resolved_package == nil then
+        if not settings.current.quiet_mode then
+            vim.notify(
+                ("[mason-nvim-lint] Linter %q cannot be resolved into a Mason package. Make sure to only provide valid linter names.")
+                :format(
+                    package_name
+                ),
+                vim.log.levels.WARN
+            )
+            return
+        end
+    end
+
+    resolved_package
         :if_present(
         ---@param pkg Package
             function(pkg)
