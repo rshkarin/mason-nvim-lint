@@ -35,6 +35,7 @@ M.nvimlint_to_package = {
     ["phpmd"] = "phpmd",
     ["phpstan"] = "phpstan",
     ["proselint"] = "proselint",
+    ["psalm"] = "psalm",
     ["pydocstyle"] = "pydocstyle",
     ["pylint"] = "pylint",
     ["revive"] = "revive",
