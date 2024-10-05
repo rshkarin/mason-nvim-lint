@@ -17,6 +17,11 @@ local DEFAULT_SETTINGS = {
     -- Disables warning notifications about misconfigurations such as invalid linter entries and incorrect plugin load order.
     ---@type boolean
     quiet_mode = false,
+
+    -- A list of linters to not install using Mason.
+    -- This setting has no relation with the`ensure_installed` setting.
+    -- It will only impacts linters set up via nvim-lint.
+    ignore_install = {},
 }
 
 M._DEFAULT_SETTINGS = DEFAULT_SETTINGS
