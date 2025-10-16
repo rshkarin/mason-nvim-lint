@@ -22,6 +22,7 @@ M.nvimlint_to_package = {
     ["erb_lint"] = "erb-lint",
     ["eslint_d"] = "eslint_d",
     ["flake8"] = "flake8",
+    ["fortitude"] = "fortitude",
     ["gdlint"] = "gdtoolkit",
     ["golangcilint"] = "golangci-lint",
     ["hadolint"] = "hadolint",
