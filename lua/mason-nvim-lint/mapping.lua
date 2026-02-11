@@ -18,7 +18,6 @@ M.nvimlint_to_package = {
     ["cspell"] = "cspell",
     ["curlylint"] = "curlylint",
     ["djlint"] = "djlint",
-    ["bacon"] = "bacon",
     ["editorconfig-checker"] = "editorconfig-checker",
     ["erb_lint"] = "erb-lint",
     ["eslint_d"] = "eslint_d",
