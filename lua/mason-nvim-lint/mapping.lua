@@ -59,6 +59,8 @@ M.nvimlint_to_package = {
     ["vulture"] = "vulture",
     ["write_good"] = "write-good",
     ["yamllint"] = "yamllint",
+    ["dotenv_linter"] = "dotenv-linter",
+    ["sqruff"] = "sqruff",
 }
 
 M.package_to_nvimlint = _.invert(M.nvimlint_to_package)
