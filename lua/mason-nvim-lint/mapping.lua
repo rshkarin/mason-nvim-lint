@@ -32,6 +32,7 @@ M.nvimlint_to_package = {
     ["ktlint"] = "ktlint",
     ["luacheck"] = "luacheck",
     ["markdownlint"] = "markdownlint",
+    ["mbake"] = "mbake"
     ["mypy"] = "mypy",
     ["oxlint"] = "oxlint",
     ["phpcs"] = "phpcs",
