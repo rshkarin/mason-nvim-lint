@@ -52,6 +52,7 @@ M.nvimlint_to_package = {
     ["shellharden"] = "shellharden",
     ["solhint"] = "solhint",
     ["sqlfluff"] = "sqlfluff",
+    ["sqruff"] = "sqruff",
     ["standardrb"] = "standardrb",
     ["stylelint"] = "stylelint",
     ["snyk_iac"] = "snyk",
