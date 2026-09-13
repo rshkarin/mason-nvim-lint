@@ -5,7 +5,7 @@
 ## Requirements
 
 -   neovim `>= 0.7.0`
--   [`mason.nvim`](https://github.com/williamboman/mason.nvim)
+-   [`mason.nvim`](https://github.com/mason-org/mason.nvim)
 -   [`nvim-lint`](https://github.com/mfussenegger/nvim-lint)
 
 ## Installation
@@ -13,18 +13,20 @@
 ### [Lazy](https://github.com/folke/lazy.nvim)
 
 ```lua
-{
-    "williamboman/mason.nvim",
-    "mfussenegger/nvim-lint",
-    "rshkarin/mason-nvim-lint",
+use {
+    "mason-org/mason-nvim-lint",
+    dependencies = {
+        "williamboman/mason.nvim",
+        "mfussenegger/nvim-lint",   
+    },
 }
 ```
 
 ### [Packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use {
-    "williamboman/mason.nvim",
+{
+    "mason-org/mason.nvim",
     "mfussenegger/nvim-lint",
     "rshkarin/mason-nvim-lint",
 }
